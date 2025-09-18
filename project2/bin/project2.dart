@@ -43,3 +43,4 @@ void main(List<String> arguments) {
       : "Maaf anda belum lulus";
   print(status1);
 }
+
