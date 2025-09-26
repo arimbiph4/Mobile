@@ -58,17 +58,26 @@ void main(List<String> arguments) {
 
   
 //record
-void main(){
-  var mahasiswa = ("Arimbi", 20, true);
-  print(mahasiswa);
-  print(mahasiswa.$1);
-  print(mahasiswa.$2);
+// void main(){
+//   var mahasiswa = ("Arimbi", 20, true);
+//   print(mahasiswa);
+//   print(mahasiswa.$1);
+//   print(mahasiswa.$2);
 
-  //named record
-  var mhs = (nama: "Arimbi", umur : 20);
-  print("Nama : ${mhs.nama}, Umur : ${mhs.umur}");
+//   //named record
+//   var mhs = (nama: "Arimbi", umur : 20);
+//   print("Nama : ${mhs.nama}, Umur : ${mhs.umur}");
 
+
+//function
+void sapa(String nama, int umur){
+  print("Halo namaku $nama, umurku $umur tahun");
 }
 
+void main() {
+  sapa("Arimbi", 20); //parameternya nama -> "Arimbi", umur -> 20
 }
+}
+
+
 
