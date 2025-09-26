@@ -45,16 +45,30 @@ void main(List<String> arguments) {
 //print('Hello world: ${project3.calculate()}!');
 
 //map
-var sudah = {'nim': "101", 'nama': "andi", 'umur': 20, 'nim': "102"};
-print(sudah);
-print(sudah['nama']);
-var opo = {
-  'nim': ["101", "102"],
-  'nama': ["andi", "budi"],
-  'umur': [20,21],
-};
-print(opo);
-print(opo['nama']![1]);
+// var sudah = {'nim': "101", 'nama': "andi", 'umur': 20, 'nim': "102"};
+// print(sudah);
+// print(sudah['nama']);
+// var opo = {
+//   'nim': ["101", "102"],
+//   'nama': ["andi", "budi"],
+//   'umur': [20,21],
+// };
+// print(opo);
+// print(opo['nama']![1]);
 
   
+//record
+void main(){
+  var mahasiswa = ("Arimbi", 20, true);
+  print(mahasiswa);
+  print(mahasiswa.$1);
+  print(mahasiswa.$2);
+
+  //named record
+  var mhs = (nama: "Arimbi", umur : 20);
+  print("Nama : ${mhs.nama}, Umur : ${mhs.umur}");
+
 }
+
+}
+
