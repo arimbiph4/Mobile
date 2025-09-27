@@ -70,12 +70,21 @@ void main(List<String> arguments) {
 
 
 //function
-void sapa(String nama, int umur){
-  print("Halo namaku $nama, umurku $umur tahun");
-}
+// void sapa(String nama, int umur){
+//   print("Halo namaku $nama, umurku $umur tahun");
+// }
 
-void main() {
-  sapa("Arimbi", 20); //parameternya nama -> "Arimbi", umur -> 20
+// void main() {
+//   sapa("Arimbi", 20); //parameternya nama -> "Arimbi", umur -> 20
+// }
+
+
+//Anonymous Function
+void main(){
+  var list = [1, 2, 3];
+  list.forEach((angka) {
+    print("Angka: $angka");
+  });
 }
 }
 
