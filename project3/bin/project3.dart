@@ -80,11 +80,21 @@ void main(List<String> arguments) {
 
 
 //Anonymous Function
+// void main(){
+//   var list = [1, 2, 3];
+//   list.forEach((angka) {
+//     print("Angka: $angka");
+//   });
+// }
+
+//lexicalscope
 void main(){
-  var list = [1, 2, 3];
-  list.forEach((angka) {
-    print("Angka: $angka");
-  });
+  var x = 10;
+  void tampil(){
+    print(x);   //bisa akses x meskepin x ada diluar
+  }
+
+  tampil();
 }
 }
 
