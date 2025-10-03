@@ -1,60 +1,5 @@
-// import 'package:flutter/material.dart';
-
-// void main() {
-//   runApp(ArimbiApp());
-// }
-
-// class ArimbiApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: "Arimbi App",
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text(
-//             "Balonku ada 5",
-//             style: TextStyle(
-//               fontSize: 24,
-//               fontWeight: FontWeight.bold,
-//               color: Colors.white,
-//               fontFamily: 'Arial',
-//             ),
-//           ),
-//           backgroundColor: Colors.blue,
-//           centerTitle: false,
-//           foregroundColor: Colors.white,
-//         ),
-//         body: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           crossAxisAlignment: CrossAxisAlignment.center,
-//           children: [
-//             Text(
-//               "Balonku ada 5\nRupa-rupa warnanya\nHijau, kuning, kelabu\nMerah muda dan biru",
-//               style: TextStyle(
-//                 fontSize: 32,
-//                 fontWeight: FontWeight.bold,
-//                 color: Colors.black,
-//                 fontFamily: 'Arial',
-//               ),
-//             ),
-//             SizedBox(height: 20),
-//             Text(
-//               "Meletus balon hijau\nHatiku sangat kacau\nBalonku tinggal 4\nKupegang erat-erat",
-//               style: TextStyle(
-//                 fontSize: 20,
-//                 color: Colors.grey[700],
-//                 fontFamily: 'Arial',
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
 import 'package:flutter/material.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(ArimbiApp());
@@ -64,108 +9,189 @@ class ArimbiApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Arimbi App",
+      title: 'Arimbi App',
       home: Scaffold(
+  //         appBar: AppBar(title: const Text("Column & Row Example")),
+  //       body: Center(
+  //         child: Column(
+  //           mainAxisAlignment: MainAxisAlignment.center,
+  //           children: [
+  //             const Text("Atas"),
+  //             Row(
+  //               mainAxisAlignment: MainAxisAlignment.center,
+  //               children: const [
+  //                 Icon(Icons.star, color: Colors.red, size: 40),
+  //                 Icon(Icons.star, color: Colors.green, size: 40),
+  //                 Icon(Icons.star, color: Colors.blue, size: 40),
+  //         ],
+  //       ),
+  //       const Text("Bawah"),
+  //     ],
+  //   ),
+  // ),
         appBar: AppBar(
-          title: Text(
-            "Tak Kan Pernah Ada",
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              fontFamily: 'Arial',
-            ),
-          ),
-          backgroundColor: const Color.fromARGB(255, 225, 114, 151),
-          centerTitle: true,
-          foregroundColor: Colors.white,
+           title: Row(
+    children: const [
+      Text(
+        "Balon ku ada 5", 
+        style: TextStyle(
+          fontSize: 32,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+          fontFamily: 'Arial',
+        ),
+      ),
+      SizedBox(width: 10), // jarak antara teks dan logo
+      FlutterLogo(
+        size: 100,
+        style: FlutterLogoStyle.horizontal,
+        textColor: Colors.blue,
+      ),
+    ],
+           ),
+             
+          backgroundColor:  Colors.lightBlueAccent,
+          leading: const Icon(Icons.menu),
+          centerTitle: false,
+          actions: const[
+            Icon(Icons.search),
+            Icon(Icons.more_vert),
+          ],
         ),
         body: Container(
-          color: Colors.deepOrangeAccent, // background
-          padding: EdgeInsets.all(20),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end, // ratakan ke kanan
-              children: [
-                Text(
-                  "[Verse 1]\n"
-                  "Dia, memang hanya dia\n"
-                  "Ku selalu memikirkannya\n"
-                  "Tak pernah ada habisnya\n"
-                  "Benar dia, benar hanya dia\n"
-                  "Ku selalu menginginkannya\n"
-                  "Belaian dari tangannya\n"
-                  "Mungkin hanya dia\n"
-                  "Harta yang paling terindah\n"
-                  "Di perjalanan hidupku\n"
-                  "Sejak derap denyut nadiku\n"
-                  "Mungkin hanya dia\n"
-                  "Indahnya sangat berbeda\n"
-                  "Ku haus merindukannya",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontFamily: 'Arial',
-                  ),
-                ),
-                SizedBox(height: 30),
-                Text(
-                  "[Chorus]\n"
-                  "Ku ingin kau tahu isi hatiku\n"
-                  "Kaulah yang terakhir dalam hidupku\n"
-                  "Tak ada yang lain hanya kamu\n"
-                  "Tak pernah ada\n"
-                  "Takkan pernah ada",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.yellow,
-                    fontFamily: 'Arial',
-                  ),
-                ),
-                SizedBox(height: 30),
-                Text(
-                  "[Verse 2]\n"
-                  "Benar dia, benar hanya dia\n"
-                  "Ku selalu menginginkannya\n"
-                  "Belaian dari tangannya\n"
-                  "Mungkin hanya dia\n"
-                  "Indahnya sangat berbeda\n"
-                  "Ku haus merindukannya",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontFamily: 'Arial',
-                  ),
-                ),
-                SizedBox(height: 30),
-                Text(
-                  "[Chorus]\n"
-                  "Ku ingin kau tahu isi hatiku\n"
-                  "Kaulah yang terakhir dalam hidupku\n"
-                  "Tak ada yang lain hanya kamu\n"
-                  "Tak pernah ada\n"
-                  "Takkan pernah ada\n"
-                  "Ku ingin kau selalu di pikiranku\n"
-                  "Kau yang selalu larut dalam darahku\n"
-                  "Tak ada yang lain\n"
-                  "Hanya kamu\n"
-                  "Tak pernah ada\n"
-                  "Takkan pernah ada",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.yellow,
-                    fontFamily: 'Arial',
-                  ),
-                ),
-              ],
+          margin: const EdgeInsets.all(5), //jarak luar
+          padding: const EdgeInsets.all(15), //jarak dalam
+          // color: Colors.lightBlue[50],   // background body
+          //alignment: Alignment.bottomRight,
+          alignment: Alignment.center,  
+          width: 2000,
+          height: 2000,
+          decoration: BoxDecoration(
+            // color: const Color.fromARGB(255, 4, 240, 217),
+            // borderRadius: BorderRadius.circular(20),
+            // border: Border.all(color: Colors.white, width: 3),
+            gradient: LinearGradient(
+              colors: [ Colors.blueGrey, Colors.redAccent],
+              end: Alignment.bottomRight,
             ),
           ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset("assets/image.png", width: 150),
+              // Image.network("https://flutter.dev/images/flutter-logo-sharing.png",width: 150,),
+              // //Image.file(File('path/to/image.png')),
+              // const Placeholder(
+              //   fallbackWidth: 100,
+              //   fallbackHeight: 100,
+              //   color: Colors.red,),
+                const Text(
+                  "Custom Font",
+                  style: TextStyle(fontFamily: "Poppins", fontSize: 24,),
+                    ),
+              Text(
+                "Balonku ada 5\nRupa-rupa warnanya\nHijau, kuning, kelabu\nMerah muda dan biru",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,//tebal
+                  wordSpacing: 5,//jarak antar kata
+                  decoration: TextDecoration.underline,
+                  color:  Colors.green,
+                  fontFamily: 'monospace',
+                ),
+                textAlign: TextAlign.center,//rata kiri, kanan, tengah
+                //maxLines: 3, //jumlah baris maksimal
+                //overflow: TextOverflow.ellipsis,//kalau kepanjangan
+              ),
+              const SizedBox(height: 20),
+              Text(
+                "Meletus balon hijau\nHatiku sangat kacau\nBalonku tinggal 4\nKupegang erat-erat",
+                style: TextStyle(
+                  fontSize: 10,
+                  fontStyle: FontStyle.italic, //miring
+                  letterSpacing: 8,//jarak antar huruf
+                  color:  Colors.yellow, // biar kontras sama background teal
+                  fontFamily: 'monospace',
+                ),
+                textAlign: TextAlign.center,
+                
+              ),
+              const SizedBox(height: 30),
+              //    ElevatedButton(
+              //     onPressed: (){
+              //       print("Elevated Button ditekan!");
+              //     },
+              //     child: const Text("Elevated Button"),
+              // ),
+              // TextButton(onPressed:(){
+              //   print("Text Button ditekan!");
+              // },
+              //  child: const Text("Text Button"),
+              // ),
+              // OutlinedButton(onPressed: (){
+              //   print("Outlined Button ditekan!");
+              // },
+              // child: const Text("Outlined Button"),
+              // ),
+              // IconButton(
+              //   icon: const Icon(Icons.favorite, color: Colors.red),
+              //   onPressed: (){
+              //     print("Icon Button ditekan!");
+              //   },
+              // ),
+            ],
+          ),
+        ),
+      
+        // body: const Center(
+        //   child: Text("Body Applikasi"),
+        // ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+          child: const Icon(Icons.add),
+          ), 
+          drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: const <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(color: Colors.pinkAccent), 
+                child: Text(
+                  'Drawer Header',
+                  style: TextStyle(color: Colors.purple),
+                ),
+              ),
+              ListTile(leading: Icon(Icons.message),title: Text('Messages')),
+              ListTile(
+                leading: Icon(Icons.account_circle),
+                title: Text('Profile'),
+              ),
+              ListTile(leading: Icon(Icons.settings), title: Text('Settings')),
+            ],
+          ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(
+              Icons.home,
+              size: 30,
+              color: Colors. blueGrey,
+            ), 
+            label: 'Home'),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.business,
+                size: 30,
+                color: Colors. blueGrey,
+                ),
+              label: 'Business',
+              ),
+              BottomNavigationBarItem(icon: Icon(
+                Icons.school,
+                size: 30,
+                color: Colors.blueGrey,
+                ), label: 'School'),
+              ],
         ),
       ),
     );
